@@ -1,4 +1,4 @@
-package com.designpattern.observer.pattern;
+package com.designpattern.observer;
 
 public class IndiaChatRoomAdListener extends ChatRoomAdListener {
 

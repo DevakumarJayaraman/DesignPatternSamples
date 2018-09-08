@@ -1,4 +1,4 @@
-package com.designpattern.observer.pattern;
+package com.designpattern.observer;
 
 abstract class ChatRoomAdListener {
 	protected Advertiser advertiser;
