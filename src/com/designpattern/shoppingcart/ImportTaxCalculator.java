@@ -1,16 +1,30 @@
 package com.designpattern.shoppingcart;
 
 public class ImportTaxCalculator extends TaxCalculator {
+	
 	@Override
-	protected void calculateTax(Product product) {
-		if (product instanceof CD) {
-			CD cd = (CD) product;
-			if (cd.isImported()) {
-				cd.setImportTax(cd.getActualPrice() * .05);
-			}
-		}else if (product instanceof Computer) {
-			Computer computer = (Computer) product;
-			computer.setImportTax(computer.getActualPrice() * .05);
+	protected void calculateTax(Book book) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void calculateTax(CD cd) {
+		if (cd.isImported()) {
+			cd.setImportTax(cd.getActualPrice() * .05);
 		}
+
+	}
+
+	@Override
+	protected void calculateTax(Computer computer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void calculateTax(Cosmetic cosmetic) {
+		// TODO Auto-generated method stub
+
 	}
 }

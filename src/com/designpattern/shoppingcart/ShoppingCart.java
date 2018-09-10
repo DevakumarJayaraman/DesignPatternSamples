@@ -7,8 +7,10 @@ public class ShoppingCart {
 	private List<Product> cartItems = new ArrayList<>();
 	private List<TaxCalculator> taxCalculators = new ArrayList<>();
 
-	public void subscribeTaxCalculator(TaxCalculator taxCalculator) {
-		this.taxCalculators.add(taxCalculator);
+	public ShoppingCart() {
+		this.taxCalculators.add(new SalesTaxCalculator());
+		this.taxCalculators.add(new ImportTaxCalculator());
+		this.taxCalculators.add(new ServiceTaxCalculator());
 	}
 
 	public void addToCart(Product product) {
@@ -32,7 +34,7 @@ public class ShoppingCart {
 			System.out.println(product);
 			totalWithoutTax += product.getPriceWithoutTax();
 			totalTax += product.getTotalTax();
-			extendedPrice+=product.getExtendedPrice();
+			extendedPrice += product.getExtendedPrice();
 		}
 		System.out.println("Total Without Tax : " + totalWithoutTax);
 		System.out.println("Total Tax : " + totalTax);

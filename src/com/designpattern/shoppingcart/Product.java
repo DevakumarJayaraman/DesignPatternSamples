@@ -78,10 +78,8 @@ public abstract class Product {
 		this.serviceTax = serviceTax;
 	}
 	
-	public void calculateTax(TaxCalculator taxCalculator){
-		taxCalculator.calculateTax(this);
-	}
-
+	public abstract void calculateTax(TaxCalculator taxCalculator);
+	
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", actualPrice=" + actualPrice + ", quantity=" + quantity

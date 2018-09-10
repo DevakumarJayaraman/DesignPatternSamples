@@ -6,4 +6,9 @@ public class Computer extends Product {
 		this.quantity = quantity;
 		this.actualPrice=actualPrice;
 	}
+	
+	@Override
+	public void calculateTax(TaxCalculator taxCalculator) {
+		taxCalculator.calculateTax(this);
+	}
 }

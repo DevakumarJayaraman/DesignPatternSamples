@@ -4,10 +4,6 @@ public class ShoppingCartClient {
 	public static void main(String[] args) {
 		ShoppingCart cart = new ShoppingCart();
 
-		cart.subscribeTaxCalculator(new SalesTaxCalculator());
-		cart.subscribeTaxCalculator(new ImportTaxCalculator());
-		cart.subscribeTaxCalculator(new ServiceTaxCalculator());
-
 		Book book = new Book("JAVA", 10, 100);
 		CD cd = new CD("Pirates of the caribean", 5, 50);
 		Cosmetic cosmetic = new Cosmetic("Mascara", 2, 20);
@@ -21,6 +17,7 @@ public class ShoppingCartClient {
 		cart.calculatePrice();
 		
 		book.setQuantity(20);
+		computer.setQuantity(2);
 		
 		cart.calculatePrice();
 	}

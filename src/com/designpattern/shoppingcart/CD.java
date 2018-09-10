@@ -17,4 +17,9 @@ public class CD extends Product {
 	public void setImported(boolean isImported) {
 		this.isImported = isImported;
 	}
+	
+	@Override
+	public void calculateTax(TaxCalculator taxCalculator) {
+		taxCalculator.calculateTax(this);
+	}
 }
